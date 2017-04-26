@@ -1,5 +1,7 @@
 package com.gettipsi.boilerplate;
 
+import android.util.Log;
+
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
@@ -25,6 +27,7 @@ public class RNBoilerplateModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void findCars(Promise promise) {
+    Log.d("ervervet", "tergrtrthbrth");
     WritableNativeArray cars = new WritableNativeArray();
     cars.pushString("Mercedes-Benz");
     cars.pushString("BMW");

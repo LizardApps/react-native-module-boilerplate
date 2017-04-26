@@ -20,7 +20,9 @@ public class RNBoilerplateReactPackage implements ReactPackage {
 
   @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-    return Collections.emptyList();
+    return Collections.<ViewManager>singletonList(
+            new RNBoilerPlateViewManager()
+    );
   }
 
   @Override

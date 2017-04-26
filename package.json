@@ -1,39 +1,101 @@
 {
-  "name": "react-native-module-boilerplate",
-  "version": "0.1.0",
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/LizardApps/react-native-module-boilerplate",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/LizardApps/react-native-module-boilerplate",
+        "spec": "git+https://github.com/LizardApps/react-native-module-boilerplate.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:LizardApps/react-native-module-boilerplate.git",
+          "sshUrl": "git+ssh://git@github.com/LizardApps/react-native-module-boilerplate.git",
+          "httpsUrl": "git+https://github.com/LizardApps/react-native-module-boilerplate.git",
+          "gitUrl": "git://github.com/LizardApps/react-native-module-boilerplate.git",
+          "shortcut": "github:LizardApps/react-native-module-boilerplate",
+          "directUrl": "https://raw.githubusercontent.com/LizardApps/react-native-module-boilerplate/master/package.json"
+        }
+      },
+      "/Users/guidovanbeek/Documents/workspaces/jwplayer"
+    ]
+  ],
+  "_from": "git+https://github.com/LizardApps/react-native-module-boilerplate.git",
+  "_id": "react-native-module-boilerplate@0.1.0",
+  "_inCache": true,
+  "_location": "/react-native-module-boilerplate",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/LizardApps/react-native-module-boilerplate",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/LizardApps/react-native-module-boilerplate",
+    "spec": "git+https://github.com/LizardApps/react-native-module-boilerplate.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:LizardApps/react-native-module-boilerplate.git",
+      "sshUrl": "git+ssh://git@github.com/LizardApps/react-native-module-boilerplate.git",
+      "httpsUrl": "git+https://github.com/LizardApps/react-native-module-boilerplate.git",
+      "gitUrl": "git://github.com/LizardApps/react-native-module-boilerplate.git",
+      "shortcut": "github:LizardApps/react-native-module-boilerplate",
+      "directUrl": "https://raw.githubusercontent.com/LizardApps/react-native-module-boilerplate/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/LizardApps/react-native-module-boilerplate.git#a5432487b7cdc0a7e4350fdc6bba5e8f9cedbd11",
+  "_shasum": "62864f74b2e3ba34c12705610405de60dc4cb123",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/LizardApps/react-native-module-boilerplate",
+  "_where": "/Users/guidovanbeek/Documents/workspaces/jwplayer",
+  "author": {
+    "name": "Tipsi"
+  },
+  "bugs": {
+    "url": "https://github.com/isnifer/react-native-module-boilerplate/issues"
+  },
+  "dependencies": {},
   "description": "React Native Module Boilerplate",
-  "main": "src/index.js",
-  "scripts": {
-    "ci": "scripts/local-ci.sh"
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.7.1",
+    "eslint-config-tipsi": "^12.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/isnifer/react-native-module-boilerplate.git"
-  },
+  "gitHead": "a5432487b7cdc0a7e4350fdc6bba5e8f9cedbd11",
+  "homepage": "https://github.com/isnifer/react-native-module-boilerplate#readme",
   "keywords": [
     "react",
     "react-native",
     "ios",
     "android"
   ],
-  "author": "Tipsi",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/isnifer/react-native-module-boilerplate/issues"
+  "main": "src/index.js",
+  "name": "react-native-module-boilerplate",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native": "*"
   },
-  "homepage": "https://github.com/isnifer/react-native-module-boilerplate#readme",
+  "readme": "# react-native-module-boilerplate\n[![Build Status](https://travis-ci.org/tipsi/react-native-module-boilerplate.svg?branch=master)](https://travis-ci.org/tipsi/react-native-module-boilerplate)\n\n1. Fork project\n\n2. You need to rename (react-native-module-boilerplate) scripts:\n\n   1. `.travis/before-cache.sh` \n   2. `scripts/copy-from-node-modules.sh`\n   3. `scripts/local-ci.sh`\n   4. `scripts/post-link-android.sh`\n   5. `scripts/pre-link.sh`\n   6. `package.json`\n\n3. Android part\n\n   1. `android/src/main/java/com/gettipsi/boilerplate` => `android/src/main/java/com/%YOUR_COMPANY%/%YOUR_MODULE_NAME%`\n   2. `android/src/main/java/com/gettipsi/boilerplate/RNBoilerplateModule.java`\n   3. `android/src/main/java/com/gettipsi/boilerplate/RNBoilerplateReactPackage.java`\n   4. `android/src/main/AndroidManifest.xml`\n\n4. `src` folder\n\n   1. `src/*.js`\n\n5. `example` folder\n\n   1. `package.json`\n   2. `index.ios.js`\n   3. `index.android.js`\n   4. `android/app/build.gradle`\n   5. `android/settings.gradle`\n\n6. iOS part\n\n   1. `open ios/RNModule.xcodeproj`\n   2. Rename project in Xcode, also accept Xcode suggest\n   3. Rename Component or Module files, it depends from your react-native-component type\n   4. Close Xcode\n   5. `npm install`\n   6. `cd example && npm install`\n   7. on example folder `open ios/example.xcodeproj`\n   8. Remove `RNModule.xcodeproj` from Libraries\n   9. Add new library\n\n   ![image](https://cloud.githubusercontent.com/assets/1788245/20928912/f70bb638-bbd8-11e6-85e6-70e553319d39.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/isnifer/react-native-module-boilerplate.git"
+  },
   "rnpm": {
     "commands": {
       "prelink": "node_modules/react-native-module-boilerplate/scripts/pre-link.sh",
       "postlink": "node_modules/react-native-module-boilerplate/scripts/post-link.sh"
     }
   },
-  "peerDependencies": {
-    "react-native": "*"
+  "scripts": {
+    "ci": "scripts/local-ci.sh"
   },
-  "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint": "^3.7.1",
-    "eslint-config-tipsi": "^12.0.0"
-  }
+  "version": "0.1.0"
 }

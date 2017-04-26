@@ -1,17 +1,19 @@
-import React, { Component, PropTypes } from 'react'
-import { View, requireNativeComponent } from 'react-native'
+import { PropTypes } from 'react';
+import {
+  NativeModules,
+  requireNativeComponent,
+  View
+} from 'react-native';
 
-export default class RNComponent extends Component {
-  static propTypes = {
-    ...View.propTypes,
-    isRed: PropTypes.bool.isRequired,
-  }
+var iface = {
+  name: 'ProgressBar',
+  propTypes: {
+    progress: PropTypes.number,
+    indeterminate: PropTypes.bool,
+    ...View.propTypes // include the default view properties
+  },
+};
 
-  render() {
-    return (
-      <RNComponentView {...this.props} />
-    )
-  }
-}
+var RNComponent = requireNativeComponent('ProgressBar', iface);
 
-const RNComponentView = requireNativeComponent('RNComponent', RNComponent)
+export default RNComponent;
